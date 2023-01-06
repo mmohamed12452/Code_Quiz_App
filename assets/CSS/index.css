@@ -1,0 +1,51 @@
+*
+{
+    margin:0px;
+    padding:0px;
+}
+body
+{
+  background-color: black;
+}
+section
+{
+    color:black;
+    background-color: yellow;
+    margin-top:5vh;
+    height:90vh;
+    width:80vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding:10px;
+}
+#highscorediv
+{
+    height:10vh;
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#score a
+{
+    text-decoration: none;
+    font-weight: 900;
+}
+
+#start_screen
+{
+   text-align: center;
+}
+
+button
+{
+    cursor: pointer;
+    color:yellow;
+    background-color: black;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+button:hover
+{
+  transform: scale(1.1);
+}
