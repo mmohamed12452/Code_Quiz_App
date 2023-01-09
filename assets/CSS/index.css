@@ -2,21 +2,30 @@
 {
     margin:0px;
     padding:0px;
+    color: yellow;
 }
 body
 {
   background-color: black;
+  background-image: url("../images/gray-wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
 }
 section
 {
     color:black;
-    background-color: yellow;
+    background-color: transparent;
     margin-top:5vh;
-    height:90vh;
-    width:80vw;
+    height:80vh;
+    width:75vw;
     margin-right: auto;
     margin-left: auto;
     padding:10px;
+    border-radius: 20px;
+    opacity: 0.3;
+    outline:solid yellow;
 }
 #highscorediv
 {
