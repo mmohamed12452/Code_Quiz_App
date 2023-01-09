@@ -11,26 +11,59 @@
 </head>
 <body>
   <section>
-    <div id="highscorediv">
-
-       <div id="score">
-        <a href="./highscore.html">View high score</a>
-       </div>
-       <div id="timer">
-        Time: <span id="time">0</span>
-       </div>
     
-    </div>
+      <div id="highscorediv">
 
-    <div id="main">
-        <div id="start_screen">
+        <div id="score">
+         <a href="./highscore.html">View high score</a>
+        </div>
+        <div id="timer">
+         Time: <span id="time">0</span>
+        </div>
+     
+     </div>
+
+     <div id="wrapper">
+
+        <div id="start_screen" class="start ">
             <h1>Coding Quiz Challenge</h1>
             <br>
-            <p>Try to answer the following code-related questions within the time limit.Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
             <br><br>
             <button id="start">Start Quiz</button>
         </div>
-    </div>
+     
+      <div id="questions" class="hide">
+        <h2>Example questions</h2>
+        <div id="question_choices">
+          answer
+        </div>
+  
+      </div>
+
+      <div id="last_screen" class="hide">
+        <h2>All Done</h2>
+        <p>Your final score is <span id="final_score">30</span>
+        </p>
+        <p>
+          Enter initials: <input type="text" id="initials" max="2">
+          <button id="Submit">Submit</button>
+        
+        </p>
+      </div>
+
+      <div id="feedback" class="hide feedback">
+        Wrong!
+      </div>
+     
+
+    
+
+ 
+    
+
+
+    
   </section>
  <script src="./assets/JavaScript/index.js"></script>
  
