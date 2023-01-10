@@ -67,6 +67,10 @@ button:hover
     display: none;
 }
 
+#start_screen{
+  text-align: center;
+}
+
 .choices button {
     display: block;
   }
