@@ -14,28 +14,11 @@ body
 
 }
 
-.scores {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+#timerdiv{
+  display: flex;
+  justify-content: space-between;
 }
 
-.timer{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-
-}
-
-.wrapper {
-    margin: 100px auto 0 auto;
-    max-width: 600px;
-  }
-
-
-  .start{
-    text-align: cente;
-  }
 section
 {
     color:black;
@@ -63,10 +46,6 @@ section
     font-weight: 900;
 }
 
-#start_screen
-{
-   text-align: center;
-}
 
 button
 {
@@ -94,6 +73,8 @@ button:hover
   
   input[type="text"] {
     font-size: 100%;
+    background-color: black;
+    color: yellow;
   }
   
   ol {
@@ -108,5 +89,14 @@ button:hover
   }
   
   li:nth-child(odd) {
-    background-color: #dfdae7;
+    background-color: black;
+  }
+
+  .feedback {
+    font-style: italic;
+    font-size: 3em;
+    font-weight: 1000;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid yellow;
   }

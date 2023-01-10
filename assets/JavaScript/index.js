@@ -29,7 +29,7 @@ function startQuiz()
     timerId = setInterval(timeUpdater, 1000);
 
     //show our time
-    timerId.textContent = timeElement;
+    timeElement.textContent = time;
      
     getQuestions();
 
@@ -74,7 +74,7 @@ function questionClick()
     //if the choice is wrong then subtract time for that particular question
     time -= 15;
 
-    if(time<0){
+    if(time < 0){
         time = 0;
     }
 
@@ -82,17 +82,15 @@ function questionClick()
     //we display the new time on the UI
 
      timeElement.textContent = time;
-     feedbackElement = "Wrong!";
+     feedbackElement.textContent = "Wrong!";
      feedbackElement.style.color ="red";
-     feedbackElement.style.fontWeight = "1000";
-     feedbackElement.style.size = "500%";
+   
    } 
    else 
    {
-    feedbackElement = "Correct!";
+    feedbackElement.textContent = "Correct!";
      feedbackElement.style.color ="green";
-     feedbackElement.style.fontWeight = "1000";
-     feedbackElement.style.size = "500%";  
+    
    }
 
    //we need to set the feedback area with the right/Wrong choice alert
@@ -137,7 +135,7 @@ function timeUpdater(){
     timeElement.textContent = time;
 
     //check if user has exhausted their time
-    if(time<=0){
+    if(time <= 0){
         endOurQuiz();
     }
 }
@@ -145,7 +143,7 @@ function timeUpdater(){
 function saveHighscore(){
     var initials = initialsElement.value.trim();
 
-    if(initials !== " "){
+    if(initials !== ""){
         // get saved scores from localstorage, or if not any, set to empty array
         var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
     
@@ -173,12 +171,14 @@ function checkForEnter(event) {
     saveHighscore();
   }
 }
+submitButtonElement.onclick = saveHighscore;
+
+// start quiz
+startButtonElement.onclick = startQuiz;
 
 //submit your entered initials by assigning your submit button to the saveHighscore function
 initialsElement.onkeyup = checkForEnter;
 
-submitButtonElement.onclick = saveHighscore();
 
 
-// start quiz
-startButtonElement.onclick = startQuiz;
+
